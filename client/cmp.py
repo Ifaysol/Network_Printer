@@ -33,7 +33,7 @@ def open_file_in_default_viewer(file_path):
         if os.name == 'nt':  # Windows
             os.startfile(file_path)
         elif os.name == 'posix':  # macOS & Linux
-            subprocess.run(['xdg-open', file_path], check=True)
+            subprocess.run(['xdg-open', file_path], check=True) 
     except Exception as e:
         messagebox.showerror("Error", f"Could not open file: {str(e)}")
 
