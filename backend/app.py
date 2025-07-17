@@ -41,7 +41,7 @@ def print_document():
     # Log the print job to the database
     log_print_job(unique_filename, file_path)
 
-    # Start the printing process in a background thread
+    # Start the printing process in a background threadb
     threading.Thread(target=background_print, args=(file_path,)).start()
 
     return jsonify({"status": "success", "message": "Printing started"}), 200
